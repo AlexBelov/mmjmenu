@@ -15,6 +15,10 @@ module Mmjmenu
   class Client
     include HTTParty
 
+    default_timeout 500
+    read_timeout 500
+    open_timeout 500
+
     parser Mmjmenu::Parser
     headers 'Content-Type' => 'application/json'
 
